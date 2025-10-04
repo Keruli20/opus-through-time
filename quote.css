@@ -1,0 +1,22 @@
+/* Shifts the elements 3rem below the navbar */
+main {
+  margin-top: 3rem;
+}
+
+/* Ensures that all the images are the same size */
+main img {
+  width: 600px;
+  height: auto;
+}
+
+/* Sets the size and the font of the quote */
+.blockquote {
+  font-size: 6rem;
+  font-style: italic;
+  font-family: "IM Fell English", serif;
+  max-width: 1600px;
+}
+
+.blockquote-footer {
+  font-size: 2rem;
+}

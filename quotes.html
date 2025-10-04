@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <!-- Link to Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Link to CSS -->
+  <link href="styles.css" rel="stylesheet" />
+  <link href="quote.css" rel="stylesheet" />
+
+  <!-- Link to custom fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=IM+Fell+English:ital@0;1&display=swap"
+    rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Title of webpage -->
+  <title>Opus Through Time</title>
+
+  <!-- Javascript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const quotes = [
+        {
+          text: `"It is the special province of music to move the heart."`,
+          author: "Johann Sebastian Bach <br> (1685-1750)",
+          image: "images/bach.png",
+        },
+        {
+          text: '"The music is not in the notes, but in the silence between."',
+          author: "Wolfgang Amadeus Mozart <br> (1756-1791)",
+          image: "images/mozart.jpeg",
+        },
+        {
+          text: '"To play without passion is inexcusable!"',
+          author: "Ludwig van Beethoven <br> (1770-1827)",
+          image: "images/beethoven.jpeg",
+        },
+        {
+          text: '"Time is the best of critics; and patience the best of teachers."',
+          author: "Frédéric Chopin <br> (1810-1849)",
+          image: "images/chopin.jpeg",
+        },
+        {
+          text: '"Sorrowful and great is the artist\'s destiny."',
+          author: "Franz Liszt <br> (1811-1886)",
+          image: "images/listz.jpg",
+        },
+        {
+          text: '"Works of art make rules but rules do not make works of art."',
+          author: "Claude Debussy <br> (1862-1918)",
+          image: "images/debussy.jpeg",
+        },
+      ];
+
+      const quoteText = document.querySelector(".blockquote p");
+      const quoteAuthor = document.querySelector(".blockquote-footer");
+      const quoteImage = document.querySelector("main img");
+      const button = document.getElementById("quotebutton");
+
+      function generateRandomQuote() {
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        quoteText.innerHTML = randomQuote.text;
+        quoteAuthor.innerHTML = randomQuote.author;
+        quoteImage.src = randomQuote.image;
+        quoteImage.alt = randomQuote.author;
+      }
+
+      generateRandomQuote();
+
+      button.addEventListener("click", function () {
+        generateRandomQuote();
+      });
+    });
+  </script>
+</head>
+
+<body class="min-vh-100 d-flex flex-column">
+
+  <!-- Navigation bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <img src="images/logo.png" alt="Logo" width="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="timeline.html">Timeline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="composers.html">Composers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="quotes.html">Quotes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main body -->
+  <main class="flex-grow-1 d-flex align-items-center justify-content-center">
+    <div class="row align-items-center">
+
+      <!-- Right side -->
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="placeholder" class="img-fluid rounded" alt="placeholder" />
+      </div>
+
+      <!-- Left side -->
+      <div class="col-md-6 d-flex flex-column align-items-center">
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <p></p>
+          </blockquote>
+          <figcaption class="blockquote-footer"></figcaption>
+        </figure>
+        <button type="button" class="btn btn-outline-light btn-lg rounded-pill" id="quotebutton">
+          Generate Another Quote
+        </button>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.card {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.card-title {
+  font-family: "IM Fell English", serif;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.carousel-inner img{
+  height: 600px;
+  object-fit: contain;
+}

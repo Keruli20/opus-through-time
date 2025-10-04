@@ -1,0 +1,25 @@
+10 HTML tags:
+1. <header>
+2. <nav>
+3. <main>
+4. <figure>
+5. <blockquote>
+6. <figcaption>
+7. <p>
+8. <div>
+9. <a>
+10. <img>
+
+
+5 CSS properties:
+1. body { background-color: black; color: white; font-family: 'Cormorant Garamond', serif; }
+2. .navbar-nav { margin-left: auto; }
+3. .nav-link.active { text-decoration: underline; }
+4. .nav-item { margin-right: 3rem; font-size: 1.2rem; }
+5. .navbar-brand { margin-left: 3rem; }
+
+Bootstrap:
+I used Bootstrap to create the navigation bar at the top of each page, as well as buttons, cards, and carousels.
+
+JavaScript:
+I used JavaScript to randomly select and display a musical quote, author, and image from a predefined list, with a button that lets users generate a new random quote each time they click.
